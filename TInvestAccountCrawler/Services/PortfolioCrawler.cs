@@ -70,7 +70,9 @@ public class PortfolioCrawler
                 StartPrice = avgPrice,
                 CurrentPrice = currentPrice,
                 StartValue = quantity * avgPrice,
-                CurrentValue = quantity * currentPrice
+                CurrentValue = quantity * currentPrice,
+                ProfitRub = quantity * (currentPrice - avgPrice),
+                ProfitPercent = (double)((currentPrice - avgPrice) ==  0 ? 0 : (currentPrice - avgPrice) / avgPrice * 100),
             };
         });
 
